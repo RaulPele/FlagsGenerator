@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ControlsView: View {
+    @State private var selectedColor = Color(red: 0.98, green: 0.9, blue: 0.2)
     var body: some View {
         VStack(spacing: 20) {
             HStack(spacing: 60) {
@@ -15,13 +16,9 @@ struct ControlsView: View {
                     Text("PICK COLOR")
                         .font(.system(size: 12).bold())
                     
-                    Button {
-                        
-                    } label: {
-                        RoundedRectangle(cornerRadius: 2)
-                            .frame(width: 124, height: 30)
-                            .foregroundColor(Color(red: 0.865, green: 0.883, blue: 0.88))
-                    }
+                    ColorPicker("", selection: $selectedColor)
+                        .scaledToFit()
+                        .labelsHidden()
                 }
                 
                 VStack(spacing: 25) {
