@@ -36,7 +36,7 @@ class Tree {
     
     init(root: Node) {
         self.root = root
-        currentParent = self.root
+        currentParent = root
     }
     
     func add(node: Node) {

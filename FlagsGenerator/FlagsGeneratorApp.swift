@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FlagsGeneratorApp: App {
+    @StateObject private var flagViewModel = FlagViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(flagViewModel)
         }
     }
 }

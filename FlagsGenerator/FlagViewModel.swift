@@ -10,13 +10,32 @@ import SwiftUI
 
 class FlagViewModel: ObservableObject {
     @Published var flagDataModel: FlagDataModel
+    @Published var selectedColor = Color(red: 0.98, green: 0.9, blue: 0.2)
+    
+    init() {
+        flagDataModel = FlagDataModel()
+    }
     
     init(flagDataModel: FlagDataModel) {
         self.flagDataModel = flagDataModel
     }
     
+    func addSubsection(orientation: Orientation) {
+        let subsection = Node(value: Stack(orientation: orientation))
+        flagDataModel.tree.add(node: subsection)
+    }
+    
+    func addStripe() {
+        print("Add stripe called")
+        
+        let stripe = Node(value: Stripe(color: selectedColor))
+        flagDataModel.tree.add(node: stripe)
+//        flagDataModel.modified.toggle()
+        print(stripe.value)
+    }
+    
     func createFlag() -> some View {
-        var rootNode = flagDataModel.tree.root
+        let rootNode = flagDataModel.tree.root
         let rootStack = rootNode.value as! Stack
 
         if rootStack.orientation == .vertical {

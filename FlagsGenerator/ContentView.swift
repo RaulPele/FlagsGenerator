@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var flagViewModel: FlagViewModel
+    
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0){
                 FlagView()
                     .frame(height: geometry.size.height * 1/3)
-
                 ControlsView()
                     .frame(maxHeight: geometry.size.height * 2/3)
             }

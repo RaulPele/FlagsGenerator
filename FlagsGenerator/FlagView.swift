@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct FlagView: View {
-    @StateObject private var flagViewModel = FlagViewModel(flagDataModel: .mock2())
-
+    @EnvironmentObject private var flagViewModel: FlagViewModel
     
     var body: some View {
         VStack(spacing: 0) {

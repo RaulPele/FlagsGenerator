@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ControlsView: View {
-    @State private var selectedColor = Color(red: 0.98, green: 0.9, blue: 0.2)
+    @EnvironmentObject private var flagViewModel: FlagViewModel
+    private var subsectionOrientation: Orientation = .vertical
+
     var body: some View {
         VStack(spacing: 20) {
             HStack(spacing: 60) {
@@ -16,7 +18,7 @@ struct ControlsView: View {
                     Text("PICK COLOR")
                         .font(.system(size: 12).bold())
                     
-                    ColorPicker("", selection: $selectedColor)
+                    ColorPicker("", selection: $flagViewModel.selectedColor)
                         .scaledToFit()
                         .labelsHidden()
                 }
@@ -43,7 +45,7 @@ struct ControlsView: View {
             .shadow(radius: 3)
             
             Button {
-                    
+                flagViewModel.addStripe()
             } label: {
                 Text("Add Stripe")
                     .foregroundColor(.white)
@@ -62,8 +64,9 @@ struct ControlsView: View {
                 HStack {
                     Spacer()
                     
+                    //vertical subsection button
                     Button {
-                    
+                        flagViewModel.addSubsection(orientation: .vertical)
                     } label: {
                         HStack(spacing: 3) {
                             RoundedRectangle(cornerRadius: 2, style: .circular)
@@ -84,8 +87,10 @@ struct ControlsView: View {
 
                     Spacer()
                     
+                    //horizontal subsection
                     Button {
-                        
+                        flagViewModel.addSubsection(orientation: .horizontal)
+
                     } label: {
                         VStack(spacing: 3) {
                             RoundedRectangle(cornerRadius: 2, style: .circular)
