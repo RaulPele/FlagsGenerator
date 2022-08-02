@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct FlagView: View {
+    @StateObject private var flagViewModel = FlagViewModel(flagDataModel: .mock2())
+
+    
     var body: some View {
-        
         VStack(spacing: 0) {
             VStack(spacing: 0) {
                 HStack {
@@ -29,10 +31,7 @@ struct FlagView: View {
                 .padding(.trailing)
             }
 
-            VStack(spacing: 0){
-                Color(red: 0.865, green: 0.883, blue: 0.88)
-                    .ignoresSafeArea()
-            }
+            flagViewModel.createFlag()
             .padding(.horizontal, 85)
             .padding(.vertical, 45)
         }

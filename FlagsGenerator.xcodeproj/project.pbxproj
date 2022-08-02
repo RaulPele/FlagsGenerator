@@ -13,6 +13,11 @@
 		DE185F7128911CC80011BD7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE185F7028911CC80011BD7F /* Preview Assets.xcassets */; };
 		DE185F78289151530011BD7F /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F77289151530011BD7F /* FlagView.swift */; };
 		DE185F7A28917B680011BD7F /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F7928917B680011BD7F /* ControlsView.swift */; };
+		DE8A2D9528992C0A00982D48 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9428992C0A00982D48 /* Tree.swift */; };
+		DE8A2D9728992E0400982D48 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9628992E0400982D48 /* DataModels.swift */; };
+		DE8A2D9928992E9900982D48 /* StripeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9828992E9900982D48 /* StripeView.swift */; };
+		DE8A2D9B28992EC900982D48 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9A28992EC900982D48 /* StackView.swift */; };
+		DE8A2D9F28992F7A00982D48 /* FlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		DE185F7028911CC80011BD7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE185F77289151530011BD7F /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
 		DE185F7928917B680011BD7F /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		DE8A2D9428992C0A00982D48 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		DE8A2D9628992E0400982D48 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		DE8A2D9828992E9900982D48 /* StripeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeView.swift; sourceTree = "<group>"; };
+		DE8A2D9A28992EC900982D48 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +65,17 @@
 		DE185F6828911CC70011BD7F /* FlagsGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				DE8A2D9A28992EC900982D48 /* StackView.swift */,
+				DE8A2D9828992E9900982D48 /* StripeView.swift */,
 				DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */,
 				DE185F6B28911CC70011BD7F /* ContentView.swift */,
 				DE185F6D28911CC80011BD7F /* Assets.xcassets */,
 				DE185F6F28911CC80011BD7F /* Preview Content */,
 				DE185F77289151530011BD7F /* FlagView.swift */,
 				DE185F7928917B680011BD7F /* ControlsView.swift */,
+				DE8A2D9428992C0A00982D48 /* Tree.swift */,
+				DE8A2D9628992E0400982D48 /* DataModels.swift */,
+				DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */,
 			);
 			path = FlagsGenerator;
 			sourceTree = "<group>";
@@ -143,6 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8A2D9F28992F7A00982D48 /* FlagViewModel.swift in Sources */,
+				DE8A2D9528992C0A00982D48 /* Tree.swift in Sources */,
+				DE8A2D9728992E0400982D48 /* DataModels.swift in Sources */,
+				DE8A2D9928992E9900982D48 /* StripeView.swift in Sources */,
+				DE8A2D9B28992EC900982D48 /* StackView.swift in Sources */,
 				DE185F7A28917B680011BD7F /* ControlsView.swift in Sources */,
 				DE185F6C28911CC70011BD7F /* ContentView.swift in Sources */,
 				DE185F78289151530011BD7F /* FlagView.swift in Sources */,

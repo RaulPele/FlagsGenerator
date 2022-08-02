@@ -101,7 +101,6 @@ struct ControlsView: View {
                     Spacer()
                 }
             }
-                
             .frame(maxWidth: .infinity)
             .padding()
             .background(.white)
