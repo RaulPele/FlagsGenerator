@@ -30,7 +30,7 @@ class FlagViewModel: ObservableObject {
         
         let stripe = Node(value: Stripe(color: selectedColor))
         flagDataModel.tree.add(node: stripe)
-//        flagDataModel.modified.toggle()
+        self.objectWillChange.send()
         print(stripe.value)
     }
     

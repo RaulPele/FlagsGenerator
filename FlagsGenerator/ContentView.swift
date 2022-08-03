@@ -15,6 +15,7 @@ struct ContentView: View {
             VStack(spacing: 0){
                 FlagView()
                     .frame(height: geometry.size.height * 1/3)
+//                    .id(UUID())
                 ControlsView()
                     .frame(maxHeight: geometry.size.height * 2/3)
             }
