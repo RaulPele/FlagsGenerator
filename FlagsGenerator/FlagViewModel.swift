@@ -22,16 +22,22 @@ class FlagViewModel: ObservableObject {
     
     func addSubsection(orientation: Orientation) {
         let subsection = Node(value: Stack(orientation: orientation))
-        flagDataModel.tree.add(node: subsection)
+        flagDataModel.tree.add(subsection: subsection)
+        self.objectWillChange.send()
     }
     
     func addStripe() {
         print("Add stripe called")
         
         let stripe = Node(value: Stripe(color: selectedColor))
-        flagDataModel.tree.add(node: stripe)
+        flagDataModel.tree.add(child: stripe)
         self.objectWillChange.send()
+        
         print(stripe.value)
+    }
+    
+    func commitSection() {
+        flagDataModel.tree.moveUp()
     }
     
     func createFlag() -> some View {

@@ -66,7 +66,7 @@ struct ControlsView: View {
                     
                     //vertical subsection button
                     Button {
-                        flagViewModel.addSubsection(orientation: .vertical)
+                        flagViewModel.addSubsection(orientation: .horizontal)
                     } label: {
                         HStack(spacing: 3) {
                             RoundedRectangle(cornerRadius: 2, style: .circular)
@@ -87,9 +87,9 @@ struct ControlsView: View {
 
                     Spacer()
                     
-                    //horizontal subsection
+                    //vertical subsection
                     Button {
-                        flagViewModel.addSubsection(orientation: .horizontal)
+                        flagViewModel.addSubsection(orientation: .vertical)
 
                     } label: {
                         VStack(spacing: 3) {
@@ -113,7 +113,7 @@ struct ControlsView: View {
             .shadow(radius: 3)
             
             Button {
-                    
+                flagViewModel.commitSection()
             } label: {
                 Text("Commit section")
                     .foregroundColor(.white)

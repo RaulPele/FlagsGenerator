@@ -42,8 +42,9 @@ struct Stack: FlagComponent {
 
 struct FlagDataModel {
     var tree = Tree(root: Node(value: Stack(orientation: .horizontal)))
-    
-    
+}
+
+extension FlagDataModel {
     static func mock1() -> FlagDataModel {
         let model =  FlagDataModel(tree:
             Tree(root:
