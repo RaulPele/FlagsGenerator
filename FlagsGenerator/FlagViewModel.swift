@@ -28,7 +28,7 @@ class FlagViewModel: ObservableObject {
     
     func addStripe() {
         print("Add stripe called")
-        
+            
         let stripe = Node(value: Stripe(color: selectedColor))
         flagDataModel.tree.add(child: stripe)
         self.objectWillChange.send()
@@ -41,9 +41,16 @@ class FlagViewModel: ObservableObject {
     }
     
     func createFlag() -> some View {
-        let rootNode = flagDataModel.tree.root
-        let rootStack = rootNode.value as! Stack
-
+        guard let rootNode = flagDataModel.tree.root else {
+            return AnyView(Color.gray)
+        }
+        
+//        let rootNode = flagDataModel.tree.root
+//        let rootStack = rootNode.value as! Stack
+        guard let rootStack = rootNode.value as? Stack else {
+            return AnyView(self.drawNode(rootNode))
+        }
+        
         if rootStack.orientation == .vertical {
             return AnyView (
                 VStack(spacing: 0) {

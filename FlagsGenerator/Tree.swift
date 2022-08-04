@@ -31,9 +31,13 @@ class Node {
 }
 
 class Tree {
-    var root: Node
-    var currentParent: Node
-    var lastAddedChild: Node
+    var root: Node?
+    var currentParent: Node?
+    var lastAddedChild: Node?
+    
+    init() {
+        
+    }
     
     init(root: Node) {
         self.root = root
@@ -42,26 +46,32 @@ class Tree {
     }
     
     func add(child: Node) {
-        currentParent.add(child: child)
-        lastAddedChild = child
+        if root == nil {
+            root = child
+            currentParent = root
+            lastAddedChild = root
+        } else {
+            currentParent!.add(child: child)
+            lastAddedChild = child
+        }
     }
     
     func add(subsection: Node) {
-        currentParent.children.removeLast()
-        currentParent.add(child: subsection)
-        subsection.add(child: lastAddedChild)
-        
+        currentParent!.children.removeLast()
+        currentParent!.add(child: subsection)
+        subsection.add(child: lastAddedChild!)
+                
         currentParent = subsection
     }
     
     func moveUp() {
-        if let newParent = currentParent.parent {
+        if let newParent = currentParent?.parent {
             currentParent = newParent
             lastAddedChild = newParent.children.last!
         } else {
             //we are in the root node which has no parent -> create a new parent
-            let newRoot = Node(value: Stack(orientation: .vertical), children: [currentParent])
-            currentParent.parent = newRoot
+            let newRoot = Node(value: Stack(orientation: .vertical), children: [currentParent!])
+            currentParent!.parent = newRoot
             root = newRoot
             currentParent = root
             lastAddedChild = newRoot.children.last!
