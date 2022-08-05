@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0ACEBB289D2B7400F32C36 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = DE0ACEBA289D2B7400F32C36 /* SymbolPicker */; };
 		DE185F6A28911CC70011BD7F /* FlagsGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */; };
 		DE185F6C28911CC70011BD7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F6B28911CC70011BD7F /* ContentView.swift */; };
 		DE185F6E28911CC80011BD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE185F6D28911CC80011BD7F /* Assets.xcassets */; };
@@ -27,7 +28,7 @@
 		DE185F6B28911CC70011BD7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE185F6D28911CC80011BD7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE185F7028911CC80011BD7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DE185F77289151530011BD7F /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
+		DE185F77289151530011BD7F /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		DE185F7928917B680011BD7F /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		DE8A2D9428992C0A00982D48 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		DE8A2D9628992E0400982D48 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0ACEBB289D2B7400F32C36 /* SymbolPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,9 @@
 			dependencies = (
 			);
 			name = FlagsGenerator;
+			packageProductDependencies = (
+				DE0ACEBA289D2B7400F32C36 /* SymbolPicker */,
+			);
 			productName = FlagsGenerator;
 			productReference = DE185F6628911CC70011BD7F /* FlagsGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +139,9 @@
 				Base,
 			);
 			mainGroup = DE185F5D28911CC70011BD7F;
+			packageReferences = (
+				DE0ACEB9289D2B7400F32C36 /* XCRemoteSwiftPackageReference "SymbolPicker" */,
+			);
 			productRefGroup = DE185F6728911CC70011BD7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE0ACEB9289D2B7400F32C36 /* XCRemoteSwiftPackageReference "SymbolPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xnth97/SymbolPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE0ACEBA289D2B7400F32C36 /* SymbolPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE0ACEB9289D2B7400F32C36 /* XCRemoteSwiftPackageReference "SymbolPicker" */;
+			productName = SymbolPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE185F5E28911CC70011BD7F /* Project object */;
 }

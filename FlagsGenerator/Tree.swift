@@ -83,11 +83,25 @@ class Tree {
             lastAddedChild = newParent.children.last!
         } else {
             //we are in the root node which has no parent -> create a new parent
-            let newRoot = Node(value: Stack(orientation: .vertical), children: [currentParent!])
+            let newRoot = Node(value: Stack(orientation: getNewOrientation()), children: [currentParent!])
             currentParent!.parent = newRoot
             self.root = newRoot
-            currentParent = root
+            currentParent = self.root
             lastAddedChild = newRoot.children.last!
         }
+    }
+    
+    func getNewOrientation() -> Orientation {
+        guard let rootStack = root?.value as? Stack else {
+            return .vertical
+        }
+        print("Get new orientation")
+        
+        if rootStack.orientation == .vertical {
+            print("horizontal")
+            return .horizontal
+        }
+        print("vertical")
+        return .vertical
     }
 }
