@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0ACEB8289CFD0100F32C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE185F6628911CC70011BD7F /* FlagsGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagsGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsGeneratorApp.swift; sourceTree = "<group>"; };
 		DE185F6B28911CC70011BD7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		DE185F6828911CC70011BD7F /* FlagsGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				DE0ACEB8289CFD0100F32C36 /* Info.plist */,
 				DE8A2D9A28992EC900982D48 /* StackView.swift */,
 				DE8A2D9828992E9900982D48 /* StripeView.swift */,
 				DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */,
@@ -298,6 +300,8 @@
 				DEVELOPMENT_TEAM = 3FF7ZT5TR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlagsGenerator/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -327,6 +331,8 @@
 				DEVELOPMENT_TEAM = 3FF7ZT5TR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlagsGenerator/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -45,8 +45,6 @@ class FlagViewModel: ObservableObject {
             return AnyView(Color.gray)
         }
         
-//        let rootNode = flagDataModel.tree.root
-//        let rootStack = rootNode.value as! Stack
         guard let rootStack = rootNode.value as? Stack else {
             return AnyView(self.drawNode(rootNode))
         }
@@ -55,7 +53,6 @@ class FlagViewModel: ObservableObject {
             return AnyView (
                 VStack(spacing: 0) {
                     ForEach(rootNode.children, id: \.id) { child in
-                        
                         self.drawNode(child)
                     }
                 }

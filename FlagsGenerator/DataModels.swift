@@ -41,7 +41,7 @@ struct Stack: FlagComponent {
 }
 
 struct FlagDataModel {
-    var tree = Tree(root: Node(value: Stack(orientation: .horizontal)))
+    var tree = Tree()
 }
 
 extension FlagDataModel {
