@@ -58,5 +58,4 @@ class FlagViewModel: ObservableObject {
         
         return root.value is Stack
     }
-    
 }

@@ -12,6 +12,8 @@
 		DE0ACEC1289D5B1600F32C36 /* EmblemPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEC0289D5B1600F32C36 /* EmblemPicker.swift */; };
 		DE0ACEC328A0F16300F32C36 /* SymbolStripeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */; };
 		DE0ACEE628A11B6C00F32C36 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEE528A11B6C00F32C36 /* Errors.swift */; };
+		DE0ACEE928A12C4600F32C36 /* PickersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEE828A12C4600F32C36 /* PickersSectionView.swift */; };
+		DE0ACEEB28A1322E00F32C36 /* AddSubsectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEEA28A1322E00F32C36 /* AddSubsectionView.swift */; };
 		DE185F6A28911CC70011BD7F /* FlagsGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */; };
 		DE185F6C28911CC70011BD7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F6B28911CC70011BD7F /* ContentView.swift */; };
 		DE185F6E28911CC80011BD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE185F6D28911CC80011BD7F /* Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		DE8A2D9528992C0A00982D48 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9428992C0A00982D48 /* Tree.swift */; };
 		DE8A2D9728992E0400982D48 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9628992E0400982D48 /* DataModels.swift */; };
 		DE8A2D9928992E9900982D48 /* StripeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9828992E9900982D48 /* StripeView.swift */; };
-		DE8A2D9B28992EC900982D48 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9A28992EC900982D48 /* StackView.swift */; };
 		DE8A2D9F28992F7A00982D48 /* FlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,8 @@
 		DE0ACEC0289D5B1600F32C36 /* EmblemPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmblemPicker.swift; sourceTree = "<group>"; };
 		DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolStripeView.swift; sourceTree = "<group>"; };
 		DE0ACEE528A11B6C00F32C36 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		DE0ACEE828A12C4600F32C36 /* PickersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersSectionView.swift; sourceTree = "<group>"; };
+		DE0ACEEA28A1322E00F32C36 /* AddSubsectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubsectionView.swift; sourceTree = "<group>"; };
 		DE185F6628911CC70011BD7F /* FlagsGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagsGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsGeneratorApp.swift; sourceTree = "<group>"; };
 		DE185F6B28911CC70011BD7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		DE8A2D9428992C0A00982D48 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		DE8A2D9628992E0400982D48 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		DE8A2D9828992E9900982D48 /* StripeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeView.swift; sourceTree = "<group>"; };
-		DE8A2D9A28992EC900982D48 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0ACEE728A12BFA00F32C36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE0ACEC0289D5B1600F32C36 /* EmblemPicker.swift */,
+				DE8A2D9828992E9900982D48 /* StripeView.swift */,
+				DE185F6B28911CC70011BD7F /* ContentView.swift */,
+				DE185F77289151530011BD7F /* FlagView.swift */,
+				DE185F7928917B680011BD7F /* ControlsView.swift */,
+				DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */,
+				DE0ACEE828A12C4600F32C36 /* PickersSectionView.swift */,
+				DE0ACEEA28A1322E00F32C36 /* AddSubsectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE0ACEEC28A132C200F32C36 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A2D9428992C0A00982D48 /* Tree.swift */,
+				DE8A2D9628992E0400982D48 /* DataModels.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		DE0ACEED28A132DA00F32C36 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DE0ACEEE28A132ED00F32C36 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE0ACEE528A11B6C00F32C36 /* Errors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		DE185F5D28911CC70011BD7F = {
 			isa = PBXGroup;
 			children = (
@@ -76,22 +118,15 @@
 		DE185F6828911CC70011BD7F /* FlagsGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				DE0ACEC0289D5B1600F32C36 /* EmblemPicker.swift */,
+				DE0ACEEE28A132ED00F32C36 /* Utils */,
+				DE0ACEED28A132DA00F32C36 /* ViewModels */,
+				DE0ACEEC28A132C200F32C36 /* DataModels */,
+				DE0ACEE728A12BFA00F32C36 /* Views */,
 				DE0ACEBE289D57C800F32C36 /* sfsymbols.txt */,
 				DE0ACEB8289CFD0100F32C36 /* Info.plist */,
-				DE8A2D9A28992EC900982D48 /* StackView.swift */,
-				DE8A2D9828992E9900982D48 /* StripeView.swift */,
 				DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */,
-				DE185F6B28911CC70011BD7F /* ContentView.swift */,
 				DE185F6D28911CC80011BD7F /* Assets.xcassets */,
 				DE185F6F28911CC80011BD7F /* Preview Content */,
-				DE185F77289151530011BD7F /* FlagView.swift */,
-				DE185F7928917B680011BD7F /* ControlsView.swift */,
-				DE8A2D9428992C0A00982D48 /* Tree.swift */,
-				DE8A2D9628992E0400982D48 /* DataModels.swift */,
-				DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */,
-				DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */,
-				DE0ACEE528A11B6C00F32C36 /* Errors.swift */,
 			);
 			path = FlagsGenerator;
 			sourceTree = "<group>";
@@ -187,11 +222,12 @@
 				DE8A2D9728992E0400982D48 /* DataModels.swift in Sources */,
 				DE0ACEE628A11B6C00F32C36 /* Errors.swift in Sources */,
 				DE8A2D9928992E9900982D48 /* StripeView.swift in Sources */,
-				DE8A2D9B28992EC900982D48 /* StackView.swift in Sources */,
 				DE185F7A28917B680011BD7F /* ControlsView.swift in Sources */,
 				DE0ACEC328A0F16300F32C36 /* SymbolStripeView.swift in Sources */,
 				DE185F6C28911CC70011BD7F /* ContentView.swift in Sources */,
 				DE185F78289151530011BD7F /* FlagView.swift in Sources */,
+				DE0ACEEB28A1322E00F32C36 /* AddSubsectionView.swift in Sources */,
+				DE0ACEE928A12C4600F32C36 /* PickersSectionView.swift in Sources */,
 				DE185F6A28911CC70011BD7F /* FlagsGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
