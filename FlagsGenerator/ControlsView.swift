@@ -48,7 +48,13 @@ struct ControlsView: View {
             .shadow(radius: 3)
             
             Button {
-                flagViewModel.addStripe()
+                do {
+                    try flagViewModel.addStripe()
+                } catch AddStripeError.containerNotFound {
+                    flagViewModel.showErrorAlert = true
+                } catch {
+                    
+                }
             } label: {
                 Text("Add Stripe")
                     .foregroundColor(.white)
@@ -58,6 +64,15 @@ struct ControlsView: View {
             }
             .background(Color(red: 0.131, green: 0.573, blue: 0.712))
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .alert("Can't add stripe", isPresented: $flagViewModel.showErrorAlert) {
+                Button(role: .cancel, action: {
+                    
+                }) {
+                    Text("Cancel")
+                }
+            } message: {
+                Text("You must add a subsection first!")
+            }
             
             VStack() {
                 Text("ADD SUBSECTION")

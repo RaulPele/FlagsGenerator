@@ -11,6 +11,7 @@
 		DE0ACEBF289D57C800F32C36 /* sfsymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE0ACEBE289D57C800F32C36 /* sfsymbols.txt */; };
 		DE0ACEC1289D5B1600F32C36 /* EmblemPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEC0289D5B1600F32C36 /* EmblemPicker.swift */; };
 		DE0ACEC328A0F16300F32C36 /* SymbolStripeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */; };
+		DE0ACEE628A11B6C00F32C36 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0ACEE528A11B6C00F32C36 /* Errors.swift */; };
 		DE185F6A28911CC70011BD7F /* FlagsGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */; };
 		DE185F6C28911CC70011BD7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE185F6B28911CC70011BD7F /* ContentView.swift */; };
 		DE185F6E28911CC80011BD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE185F6D28911CC80011BD7F /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		DE0ACEBE289D57C800F32C36 /* sfsymbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sfsymbols.txt; path = ../../../../sfsymbols.txt; sourceTree = "<group>"; };
 		DE0ACEC0289D5B1600F32C36 /* EmblemPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmblemPicker.swift; sourceTree = "<group>"; };
 		DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolStripeView.swift; sourceTree = "<group>"; };
+		DE0ACEE528A11B6C00F32C36 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		DE185F6628911CC70011BD7F /* FlagsGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagsGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE185F6928911CC70011BD7F /* FlagsGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsGeneratorApp.swift; sourceTree = "<group>"; };
 		DE185F6B28911CC70011BD7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				DE8A2D9628992E0400982D48 /* DataModels.swift */,
 				DE8A2D9E28992F7A00982D48 /* FlagViewModel.swift */,
 				DE0ACEC228A0F16300F32C36 /* SymbolStripeView.swift */,
+				DE0ACEE528A11B6C00F32C36 /* Errors.swift */,
 			);
 			path = FlagsGenerator;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				DE0ACEC1289D5B1600F32C36 /* EmblemPicker.swift in Sources */,
 				DE8A2D9528992C0A00982D48 /* Tree.swift in Sources */,
 				DE8A2D9728992E0400982D48 /* DataModels.swift in Sources */,
+				DE0ACEE628A11B6C00F32C36 /* Errors.swift in Sources */,
 				DE8A2D9928992E9900982D48 /* StripeView.swift in Sources */,
 				DE8A2D9B28992EC900982D48 /* StackView.swift in Sources */,
 				DE185F7A28917B680011BD7F /* ControlsView.swift in Sources */,

@@ -17,7 +17,8 @@ struct FlagView: View {
                     Spacer()
 
                     Button {
-                        saveFlag(AnyView(flagViewModel.createFlag().ignoresSafeArea()))
+                        saveFlag(AnyView(createFlag()
+                            .ignoresSafeArea()))
                     } label: {
                         Text("Save Flag")
                             .padding(.horizontal, 15)
@@ -30,10 +31,9 @@ struct FlagView: View {
                 .padding(.trailing)
             }
 
-            flagViewModel.createFlag()
+            createFlag()
                 .padding(.horizontal, 85)
                 .padding(.vertical, 45)
-            
         }
     }
     
@@ -41,6 +41,63 @@ struct FlagView: View {
         let flagImage = flagView.asUiImage()
         print(flagImage)
         UIImageWriteToSavedPhotosAlbum(flagImage, nil, nil, nil)
+    }
+    
+    func createFlag() -> some View {
+        guard let rootNode = flagViewModel.flagDataModel.tree.root else {
+            return AnyView(Color.gray)
+        }
+        
+        guard let rootStack = rootNode.value as? Stack else {
+            return AnyView(self.drawNode(rootNode))
+        }
+        
+        if rootStack.orientation == .vertical {
+            return AnyView (
+                VStack(spacing: 0) {
+                    ForEach(rootNode.children, id: \.id) { child in
+                        self.drawNode(child)
+                    }
+                }
+            )
+        } else {
+            return AnyView (
+                HStack(spacing: 0) {
+                    ForEach(rootNode.children, id: \.id) { child in
+                        self.drawNode(child)
+                    }
+                }
+            )
+        }
+    }
+    
+    func drawNode(_ node: Node) -> some View {
+        var myView = AnyView(StripeView(stripe: Stripe(color: .gray)))
+        
+        if let stripe = node.value as? Stripe {
+            myView =  AnyView(StripeView(stripe: stripe))
+        } else if let symbolStripe = node.value as? SymbolStripe {
+            myView = AnyView(SymbolStripeView(symbolStripe: symbolStripe))
+        } else if let stack = node.value as? Stack {
+            if stack.orientation == .vertical {
+                myView =  AnyView (
+                    VStack(spacing: 0) {
+                        ForEach(node.children, id: \.id) { child in
+                            self.drawNode(child)
+                        }
+                    }
+                )
+            } else {
+                myView = AnyView (
+                    HStack(spacing: 0) {
+                        ForEach(node.children, id: \.id) { child in
+                            self.drawNode(child)
+                        }
+                    }
+                )
+            }
+        }
+        return myView
     }
 }
 
@@ -51,9 +108,7 @@ extension View {
        
         if let view = controller.view {
             let contentSize = CGSize(width: UIScreen.main.bounds.width, height: 200)
-            
             view.bounds = CGRect(origin: .zero, size: contentSize)
-            
             let renderer = UIGraphicsImageRenderer(size: contentSize)
             uiImage = renderer.image { _ in
                 view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)

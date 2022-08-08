@@ -14,6 +14,9 @@ struct SymbolStripeView: View {
         ZStack(alignment: .center) {
             symbolStripe.color
             Image(systemName: symbolStripe.symbol)
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: 35, maxHeight: 35)
         }
     }
 }

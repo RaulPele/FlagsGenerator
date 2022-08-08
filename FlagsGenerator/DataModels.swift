@@ -19,14 +19,7 @@ protocol FlagComponent {
 
 struct Stripe: FlagComponent {
     var id = UUID()
-    
-    var red: Double = 1
-    var green: Double = 1
-    var blue: Double = 1
-    var alpha: Double = 1
-    
     var color = Color.red
-    
 }
 
 struct SymbolStripe: FlagComponent {
@@ -37,7 +30,6 @@ struct SymbolStripe: FlagComponent {
 
 struct Stack: FlagComponent {
     var id = UUID()
-    
     var orientation: Orientation
     private(set) var components = [Stripe]()
     
@@ -52,7 +44,7 @@ struct FlagDataModel {
 
 extension FlagDataModel {
     static func mock1() -> FlagDataModel {
-        let model =  FlagDataModel(tree:
+        let model = FlagDataModel(tree:
             Tree(root:
                 Node(value: Stack(orientation: .horizontal), children: [
                     Node(value: Stripe(color: Color.blue)),
@@ -66,7 +58,7 @@ extension FlagDataModel {
     }
     
     static func mock2() -> FlagDataModel {
-        let model =  FlagDataModel(tree:
+        let model = FlagDataModel(tree:
             Tree(root:
                 Node(value: Stack(orientation: .vertical), children: [
                     Node(value: Stack(orientation: .horizontal), children: [

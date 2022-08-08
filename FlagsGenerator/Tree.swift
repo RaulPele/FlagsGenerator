@@ -14,7 +14,6 @@ class Node {
     
     weak var parent: Node?
     
-    
     init(value: FlagComponent) {
         self.value = value
     }
@@ -74,7 +73,7 @@ class Tree {
     }
     
     func moveUp() {
-        guard let root = root else {
+        guard root != nil else {
             return
         }
         
@@ -95,13 +94,11 @@ class Tree {
         guard let rootStack = root?.value as? Stack else {
             return .vertical
         }
-        print("Get new orientation")
         
         if rootStack.orientation == .vertical {
-            print("horizontal")
             return .horizontal
         }
-        print("vertical")
+        
         return .vertical
     }
 }

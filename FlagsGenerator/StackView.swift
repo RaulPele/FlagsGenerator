@@ -37,9 +37,3 @@ struct StackView: View {
     }
     
 }
-
-//struct StackView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StackView()
-//    }
-//}
