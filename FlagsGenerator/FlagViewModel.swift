@@ -12,6 +12,9 @@ class FlagViewModel: ObservableObject {
     @Published var flagDataModel: FlagDataModel
     @Published var selectedColor = Color(red: 0.98, green: 0.9, blue: 0.2)
     
+    @Published var iconPickerPresented = false
+    @Published var selectedSymbol = "photo"
+
     init() {
         flagDataModel = FlagDataModel()
     }
@@ -26,14 +29,19 @@ class FlagViewModel: ObservableObject {
         self.objectWillChange.send()
     }
     
+    
     func addStripe() {
-        print("Add stripe called")
-            
-        let stripe = Node(value: Stripe(color: selectedColor))
+        let stripe = createStripe()
         flagDataModel.tree.add(child: stripe)
         self.objectWillChange.send()
-        
-        print(stripe.value)
+    }
+    
+    func createStripe() -> Node {
+        if selectedSymbol == "photo" {
+            return Node(value: Stripe(color: selectedColor))
+        } else {
+            return Node(value: SymbolStripe(color: selectedColor, symbol: selectedSymbol))
+        }
     }
     
     func commitSection() {
@@ -73,6 +81,8 @@ class FlagViewModel: ObservableObject {
         
         if let stripe = node.value as? Stripe {
             myView =  AnyView(stripe.color)
+        } else if let symbolStripe = node.value as? SymbolStripe {
+            myView = AnyView(SymbolStripeView(symbolStripe: symbolStripe))
         } else if let stack = node.value as? Stack {
             if stack.orientation == .vertical {
                 myView =  AnyView (

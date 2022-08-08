@@ -29,6 +29,12 @@ struct Stripe: FlagComponent {
     
 }
 
+struct SymbolStripe: FlagComponent {
+    var id = UUID()
+    var color: Color
+    var symbol: String
+}
+
 struct Stack: FlagComponent {
     var id = UUID()
     

@@ -10,9 +10,7 @@ import SymbolPicker
 
 struct ControlsView: View {
     @EnvironmentObject private var flagViewModel: FlagViewModel
-    @State private var iconPickerPresented = false
-    @State private var icon = "photo"
-
+    
     var body: some View {
         VStack(spacing: 20) {
             HStack(spacing: 60) {
@@ -30,16 +28,16 @@ struct ControlsView: View {
                         .font(.system(size: 12).bold())
                     
                     Button {
-                        iconPickerPresented = true
+                        flagViewModel.iconPickerPresented = true
                     } label: {
-                        Image(systemName: icon)
+                        Image(systemName: flagViewModel.selectedSymbol)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(Color(red: 0.865, green: 0.883, blue: 0.88))
                     }
                     .frame(width: 28.33, height: 28.33)
-                    .sheet(isPresented: $iconPickerPresented) {
-                        SymbolPicker(symbol: $icon)
+                    .sheet(isPresented: $flagViewModel.iconPickerPresented) {
+                        EmblemPicker(symbol: $flagViewModel.selectedSymbol)
                     }
                 }
             }
